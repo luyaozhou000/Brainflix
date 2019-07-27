@@ -1,0 +1,15 @@
+@import '../../styles/mixins.scss';
+
+.sideVideoList {
+    padding: 0rem 1rem 0rem 1rem;
+
+    &__title {
+        margin: 2.5rem 1rem 2.5rem 1rem;
+        text-transform: uppercase;
+        text-align: left;
+        margin-left: 0px;
+        color: #AFAFAF
+    }
+
+
+}

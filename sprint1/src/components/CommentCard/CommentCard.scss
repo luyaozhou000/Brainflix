@@ -1,0 +1,42 @@
+@import "../../styles/mixins.scss";
+
+
+.commentCard {
+  box-sizing: border-box;
+  margin: 1.5rem 1rem 1.5rem 1rem;
+  display: flex;
+  border-bottom: 2px solid  #E1E1E1;
+
+  &__icon {
+     width: 2.5rem;
+     height: 2.5rem;
+     background-color: #E1E1E1;
+     border-radius: 50%;
+  }
+
+  &__comments {
+     width: 81%;
+     padding-left: 1rem;
+     @include fontSize(13px);
+
+    &--container {
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+          color: $gray-text-color;
+      }
+
+      .name {
+          font-weight: bold;
+      }
+  }
+    
+    &--commentText {
+        text-align: left;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
+}

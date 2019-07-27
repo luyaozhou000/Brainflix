@@ -1,0 +1,137 @@
+@import '../../styles/mixins.scss';
+
+
+.mainVideoDescription {
+    padding: 0rem 1rem 2.5rem 1rem;
+
+    &__title {
+        @include fontSize(24px,bold,32px);
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__topContainer {
+        display: flex;
+        margin-bottom: 2rem;
+
+        &--channel {
+            @include fontSize(14px,bold,22px);
+            margin-right: 0.5rem;
+        }
+
+        &--date {
+            color: $gray-text-color;
+            @include fontSize(14px,bold,22px);
+        }
+    }
+
+    &__bottomContainer {
+        display: flex;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #E1E1E1;
+
+        &--left {
+            display: flex;
+            margin-right: 2rem;
+
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+
+        &--right {
+            display: flex;
+
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    &__text {
+        @include fontSize(13px);
+        text-align: justify;
+        margin: 1.5rem 0 0rem 0;
+    }
+
+}
+
+
+
+.form-container {
+    margin: 0rem 1rem 1.5rem 1rem;
+    border-bottom: 2px solid #E1E1E1;
+
+    
+}
+
+
+.comment-form-title {
+    text-align: left;
+    margin: 0px;
+}
+
+
+.comment-form {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+   
+
+    &__img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin-top: 1.5rem;
+    }
+
+
+    &__wrapper {
+        width: 76%;
+
+        &--label {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            text-align: left;
+            color: $gray-text-color;
+            text-transform: uppercase;
+        }
+
+        &--button{
+            @include fontSize(14px,bold,18px);
+            width: 100%;
+            color: #fff;
+            background-color: #0095FF;
+            height: 3.5rem;
+            border-radius: 4px;
+            margin: 1rem 0 1.5rem 0;
+        }
+    
+    
+        &--input {
+        box-sizing: border-box;    
+        width: 100%;
+        height: 6.5rem;
+        border: 3px solid #0095FF;
+        margin-top: 0.5rem;
+        background-color: #FAFAFA;
+        border-radius: 4px
+    }
+        
+
+
+
+
+
+
+    }
+
+    
+
+
+
+}

@@ -1,0 +1,21 @@
+@mixin fontSize($font-size, $font-weight:'normal', $line-height:18px) {
+    font-size: $font-size;
+    font-weight: #{$font-weight};
+    line-height: $line-height;
+   
+    @content;
+}
+
+
+
+
+// text color
+$gray-text-color: #AFAFAF;
+
+
+// @mixin tablet {
+
+// // insert breakpoints here later
+//     @content;
+
+// }
