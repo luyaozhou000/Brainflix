@@ -15,7 +15,8 @@ class MainVideoDes extends React.Component {
           <h2 className="mainVideoDescription__title">
             {this.props.mainVideoDes.title}
           </h2>
-
+          
+          {/* the div wrapper below was inserted later to use flex */}
           <div className="mainVideoDescription__wrapper">
             <div className="mainVideoDescription__topContainer">
               <div className="mainVideoDescription__topContainer--channel">

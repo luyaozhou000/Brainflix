@@ -18,10 +18,16 @@
      width: 81%;
      padding-left: 1rem;
      @include fontSize(13px);
+     @include tablet {
+         width: 87%;
+     }
 
     &--container {
       display: flex;
       justify-content: space-between;
+      @include tablet {
+          justify-content: flex-start;
+      }
 
       .date {
           color: $gray-text-color;
@@ -29,6 +35,9 @@
 
       .name {
           font-weight: bold;
+          @include tablet {
+              margin-right: 0.5rem;
+          }
       }
   }
     

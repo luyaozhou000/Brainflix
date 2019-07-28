@@ -3,6 +3,9 @@
 
 .sideVideo {
     display: flex;
+    @include tablet {
+      width: 40%;
+    }
    
 
 
@@ -23,6 +26,9 @@
 
       &--channel {
         text-align: left;
+        @include tablet {
+          font-size: 12px;
+        }
       }
     }
 
