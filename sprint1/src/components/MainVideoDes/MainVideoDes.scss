@@ -3,17 +3,38 @@
 
 .mainVideoDescription {
     padding: 0rem 1rem 2.5rem 1rem;
+    @include tablet {
+       padding: 3rem 1.5rem 4rem 1.5rem;
+    }
 
     &__title {
         @include fontSize(24px,bold,32px);
         text-align: left;
         margin-top: 0;
         margin-bottom: 1rem;
+        @include tablet {
+            margin-bottom: 1.5rem;
+            @include fontSize(36px,bold,44px);
+        }
     }
+
+    &__wrapper {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #E1E1E1;
+        }
+    }
+
 
     &__topContainer {
         display: flex;
         margin-bottom: 2rem;
+        @include tablet {
+            margin-bottom: 0;
+            padding: 0rem 0 1.5rem 0;
+
+        }
 
         &--channel {
             @include fontSize(14px,bold,22px);
@@ -30,13 +51,23 @@
         display: flex;
         padding-bottom: 1.5rem;
         border-bottom: 2px solid #E1E1E1;
+        @include tablet {
+            border-bottom: 0;
+            padding: 0rem 0 1.5rem 0;
+        }
 
         &--left {
             display: flex;
             margin-right: 2rem;
+            @include tablet {
+                margin-right: 1.5rem;
+            }
 
             img {
                 margin-right: 0.5rem;
+                @include tablet {
+                    height: 20px;
+                }
             }
         }
 
@@ -45,6 +76,9 @@
 
             img {
                 margin-right: 0.5rem;
+                @include tablet {
+                    height: 20px;
+                }
             }
         }
     }
@@ -53,6 +87,11 @@
         @include fontSize(13px);
         text-align: justify;
         margin: 1.5rem 0 0rem 0;
+
+        @include tablet {
+            width: 70%;
+            margin-top: 2.5rem;
+        }
     }
 
 }
@@ -62,6 +101,9 @@
 .form-container {
     margin: 0rem 1rem 1.5rem 1rem;
     border-bottom: 2px solid #E1E1E1;
+    @include tablet {
+        margin: 0 1.5rem 1.5rem 1.5rem;
+    }
 
     
 }
@@ -78,6 +120,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    @include tablet {
+        margin-bottom: 1.5rem;
+    
+    }
 
    
 
@@ -91,6 +137,10 @@
 
     &__wrapper {
         width: 76%;
+        @include tablet {
+            display: flex;
+            width: 92%;
+        }
 
         &--label {
             display: flex;
@@ -99,6 +149,11 @@
             text-align: left;
             color: $gray-text-color;
             text-transform: uppercase;
+            @include tablet {
+                width: 100%;
+                @include fontSize(13px);
+                
+            }
         }
 
         &--button{
@@ -109,6 +164,11 @@
             height: 3.5rem;
             border-radius: 4px;
             margin: 1rem 0 1.5rem 0;
+            @include tablet {
+                width: 35%;
+                margin: 1.6rem 2.5rem 0 1rem;
+
+            }
         }
     
     
@@ -119,7 +179,10 @@
         border: 3px solid #0095FF;
         margin-top: 0.5rem;
         background-color: #FAFAFA;
-        border-radius: 4px
+        border-radius: 4px;
+        @include tablet {
+            height: 3.5rem;
+        }
     }
         
 

@@ -4,7 +4,7 @@ import views from "../../Assets/Icons/PNG/Icon-views.png";
 import favs from "../../Assets/Icons/PNG/Icon-likes.png";
 import mohan from "../../Assets/Images/Mohan-muruge.jpg";
 import "./MainVideoDes.scss";
-import Form from "../Form/Form";
+
 import CommentCard from "../CommentCard/CommentCard";
 
 class MainVideoDes extends React.Component {
@@ -15,28 +15,33 @@ class MainVideoDes extends React.Component {
           <h2 className="mainVideoDescription__title">
             {this.props.mainVideoDes.title}
           </h2>
-          <div className="mainVideoDescription__topContainer">
-            <div className="mainVideoDescription__topContainer--channel">
-              {this.props.mainVideoDes.channel}
+
+          <div className="mainVideoDescription__wrapper">
+            <div className="mainVideoDescription__topContainer">
+              <div className="mainVideoDescription__topContainer--channel">
+                {this.props.mainVideoDes.channel}
+              </div>
+              <div className="mainVideoDescription__topContainer--date">
+                {this.props.mainVideoDes.timestamp}
+              </div>
             </div>
-            <div className="mainVideoDescription__topContainer--date">
-              {this.props.mainVideoDes.timestamp}
+
+            <div className="mainVideoDescription__bottomContainer">
+              <div className="mainVideoDescription__bottomContainer--left">
+                <img src={views} />
+                <div>{this.props.mainVideoDes.views}</div>
+              </div>
+
+              <div className="mainVideoDescription__bottomContainer--right">
+                <img src={favs} />
+                <div>{this.props.mainVideoDes.likes}</div>
+              </div>
             </div>
           </div>
 
-          <div className="mainVideoDescription__bottomContainer">
-            <div className="mainVideoDescription__bottomContainer--left">
-              <img src={views} />
-              <div>{this.props.mainVideoDes.views}</div>
-            </div>
-
-            <div className="mainVideoDescription__bottomContainer--right">
-              <img src={favs} />
-              <div>{this.props.mainVideoDes.likes}</div>
-            </div>
+          <div className="mainVideoDescription__text">
+            {this.props.mainVideoDes.description}
           </div>
-
-          <div className="mainVideoDescription__text">{this.props.mainVideoDes.description}</div>
         </div>
 
         {/* a div form-container used to format items inside */}
@@ -56,15 +61,13 @@ class MainVideoDes extends React.Component {
                 COMMENT
               </button>
             </div>
-          </form> 
+          </form>
         </div>
-
 
         {/* use CommentCard component to create 3 comments */}
         {this.props.mainVideoDes.comments.map(item => (
-              <CommentCard data={item} />
-            ))}
-      
+          <CommentCard data={item} />
+        ))}
       </>
     );
   }
