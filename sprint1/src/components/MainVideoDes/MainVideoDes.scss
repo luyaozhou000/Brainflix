@@ -7,6 +7,12 @@
        padding: 3rem 1.5rem 4rem 1.5rem;
     }
 
+    @include desktop {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     &__title {
         @include fontSize(24px,bold,32px);
         text-align: left;
@@ -16,10 +22,20 @@
             margin-bottom: 1.5rem;
             @include fontSize(36px,bold,44px);
         }
+        @include desktop {
+            // margin-bottom: 1.5rem;
+            @include fontSize(36px,bold,44px);
+        }
     }
 
     &__wrapper {
         @include tablet {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #E1E1E1;
+        }
+
+        @include desktop {
             display: flex;
             justify-content: space-between;
             border-bottom: 2px solid #E1E1E1;
@@ -56,6 +72,11 @@
             padding: 0rem 0 1.5rem 0;
         }
 
+        @include desktop {
+            border-bottom: 0;
+            margin-right: 2rem;
+        }
+
         &--left {
             display: flex;
             margin-right: 2rem;
@@ -68,6 +89,10 @@
                 @include tablet {
                     height: 20px;
                 }
+                
+                @include desktop {
+                    height: 20px;
+                }
             }
         }
 
@@ -77,6 +102,10 @@
             img {
                 margin-right: 0.5rem;
                 @include tablet {
+                    height: 20px;
+                }
+                @include desktop {
+                    
                     height: 20px;
                 }
             }
@@ -92,6 +121,12 @@
             width: 70%;
             margin-top: 2.5rem;
         }
+
+        @include desktop {
+            width: 70%;
+            
+            @include fontSize(14px,bold, 22px);
+        }
     }
 
 }
@@ -103,6 +138,12 @@
     border-bottom: 2px solid #E1E1E1;
     @include tablet {
         margin: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    @include desktop {
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 1.5rem;
     }
 
     
@@ -141,6 +182,10 @@
             display: flex;
             width: 92%;
         }
+        @include desktop {
+            display: flex;
+            width: 92.5%;
+        }
 
         &--label {
             display: flex;
@@ -151,6 +196,12 @@
             text-transform: uppercase;
             @include tablet {
                 width: 100%;
+                @include fontSize(13px);
+                
+            }
+            @include desktop {
+                width: 100%;
+                margin-left: 1rem;
                 @include fontSize(13px);
                 
             }
@@ -169,6 +220,11 @@
                 margin: 1.6rem 2.5rem 0 1rem;
 
             }
+            @include desktop {
+                width: 35%;
+                margin: 1.6rem 2.5rem 0 1rem;
+
+            }
         }
     
     
@@ -183,9 +239,13 @@
         @include tablet {
             height: 3.5rem;
         }
+        @include desktop {
+            height: 3.5rem;
+        }
     }
     
 
     }
 
 }
+

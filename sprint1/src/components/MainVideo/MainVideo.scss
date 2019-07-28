@@ -14,9 +14,14 @@
       object-fit: contain;
       
       @include tablet {
-        //   width: 91.1%;
-        //   height: 400px;
+        padding: 0 2.125rem 0 2.125rem;
+        background-color: black;
          
+      }
+
+      @include desktop {
+        padding: 0 15.5rem 0 15.5rem;
+        background-color: black;
       }
 
     }
@@ -35,6 +40,11 @@
            top: 85%;
        }
     
+      @include desktop {
+          width: 63.3%;
+          margin:0 16.5rem 0 16.5rem;
+          top: 90%;
+      }
       
 
        .playBtn {
@@ -63,7 +73,11 @@
             width: 75%;
             margin-right: 1rem;
             margin-left: 1rem;
-        }
+           }
+           @include desktop {
+             width: 82.4%;
+           }
+          
        }
 
 
