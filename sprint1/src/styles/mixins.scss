@@ -7,15 +7,20 @@
 }
 
 
+@mixin tablet {
+    @media (min-width: 768px) and (max-width:1439px) {
+        @content;
+    }
+};
 
 
-// text color
+@mixin desktop {
+    @media (min-width:1439px) {
+        @content;
+    }
+}
+
+
+// ******  text color
 $gray-text-color: #AFAFAF;
 
-
-// @mixin tablet {
-
-// // insert breakpoints here later
-//     @content;
-
-// }
