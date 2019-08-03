@@ -1,0 +1,98 @@
+@import "../../styles/mixins.scss";
+
+
+.uploadVideo {
+
+    &__topTitle {
+        margin: 0.5rem 0 2rem 1rem;
+       
+
+    }
+  
+    &__subTitle {
+        margin-left: 1rem;
+        color: $gray-text-color;
+        margin-bottom: 0.5rem;
+    }
+
+    &__thumbnail {
+        height: 153px;
+        width: 100%;
+    
+    
+        &--img {
+            width: 90%;
+            margin: 0 1rem 2rem 1rem;
+        }
+    
+    }
+
+    &__form {
+
+       margin: 0 1rem 0.5rem 1rem;
+
+
+        &--lableTop {
+            display: flex;
+            flex-direction: column;
+            color: $gray-text-color;
+            text-transform: uppercase;
+            @include fontSize(13px, bold, 18px);
+        
+
+       .inputTitle {
+           height: 3rem;
+           border: 1px solid #E1E1E1;
+           border-radius: 4px;
+           background-color:  #FAFAFA;
+           margin-top: 0.2rem;
+           margin-bottom: 1.5rem;
+           }
+       }
+
+
+       &--lableBottom {
+        display: flex;
+        flex-direction: column;
+        color: $gray-text-color;
+        text-transform: uppercase;
+        @include fontSize(13px, bold, 18px);
+
+       .inputDescription {
+        height: 143px;
+        border: 1px solid #E1E1E1;
+        border-radius: 4px;
+        background-color:  #FAFAFA;
+        margin-top: 0.2rem;
+        margin-bottom: 2rem;
+       }
+
+    }   
+    
+       &--button {
+        @include fontSize(14px,bold,18px);
+        width: 100%;
+        color: #fff;
+        background-color: #0095FF;
+        height: 3.5rem;
+        border-radius: 4px;
+       }
+
+       &--cancelButton {
+        @include fontSize(14px,bold,18px);
+        width: 100%;
+        color: #0095FF;
+        // background-color:#fff;;
+        height: 3.5rem;
+       
+       }
+
+    }
+}
+
+
+
+
+
+
+
