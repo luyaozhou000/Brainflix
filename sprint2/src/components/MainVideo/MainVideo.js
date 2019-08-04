@@ -7,7 +7,7 @@ import fullscreenBtn from "../../Assets/Icons/PNG/Icon-fullscreen.png";
 class MainVideo extends React.Component {
 
    render () {
-   //  console.log(this.props.mainVideo)
+    console.log('this is MainVideo',this.props.mainVideo)
      return (
       <div className="MainVideo">
 

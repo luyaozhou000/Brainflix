@@ -5,11 +5,14 @@
 }
 
 .header-wrapper {
+  border-bottom: 1px solid #FAFAFA;
+
     @include tablet {
         height: 80px;
         box-sizing: border-box;
         display: flex;
         padding: 1rem 1.5rem 1rem 1.5rem;  
+        
     }
 
     @include desktop {
@@ -80,6 +83,10 @@
         width: 52%;
         
       }
+
+      @include desktop {
+        width: 100%;
+      }
     }
 
     ::placeholder {
@@ -133,9 +140,11 @@
        }
 
        @include desktop {
+         width: 58%;
          margin-right: 1.5rem;
          margin-left: 1.5rem;
          background-position: 10%;
+        
        }
    }
 }

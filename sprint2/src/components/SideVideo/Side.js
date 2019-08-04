@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 class Side extends React.Component {
   render() {
+    console.log('this is Side');
     return (
       <Link to={`/video/${this.props.data.id}`}>
         

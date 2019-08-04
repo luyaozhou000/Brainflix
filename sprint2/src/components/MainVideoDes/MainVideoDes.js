@@ -8,8 +8,9 @@ import "./MainVideoDes.scss";
 import CommentCard from "../CommentCard/CommentCard";
 
 class MainVideoDes extends React.Component {
+  
   render() {
- 
+    console.log('this is MainVideoDes', this.props.mainVideoDes);
     //  console.log(this.props.mainVideoDes, this.props.mainVideoDes.comments)
 
     return (

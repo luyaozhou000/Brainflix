@@ -45,9 +45,9 @@ getVideos() {
           this.setState({
             sideVideo: response.data
           })
- 
+          
           this.getVideoDetails("1af0jruup5gu")
-
+          console.log('did this happen after 2??')
          })
          .catch(error =>
           console.log('error'))
@@ -79,7 +79,9 @@ getVideoDetails(idOfVideo) {
 
 
   componentDidUpdate() {
-    console.log('component is updating')
+    console.log('component is updating');
+    console.log(this.state.mainVideo.id);
+    console.log(this.props.match.params.id);
     if (this.state.mainVideo.id !== this.props.match.params.id ) {
         Axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=luyao`)
           .then(res => {

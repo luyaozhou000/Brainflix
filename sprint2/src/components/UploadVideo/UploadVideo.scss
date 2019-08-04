@@ -3,16 +3,62 @@
 
 .uploadVideo {
 
+
+    @include desktop {
+        margin: 3rem 11.25rem 0rem 11.25rem;
+        padding-bottom: 30rem;
+    }
+
+    
     &__topTitle {
-        margin: 0.5rem 0 2rem 1rem;
+        box-sizing: border-box;
+        padding: 1.5rem 0 2rem 1rem;
+        margin: 0;
+
+        @include tablet {
+            @include fontSize(36px, bold, 44px);
+            margin: 3rem 1.5rem 0rem 1.5rem;
+            padding: 0 0 2rem 0rem;
+            border-bottom: 2px solid $gray-mercury-color;    
+        }
+      
+        @include desktop {
+            @include fontSize(60px, bold, 68px);
+            
+            padding: 0 0 2rem 0rem;
+            border-bottom: 2px solid $gray-mercury-color;    
+        }
        
 
     }
   
+
+    .img-wrapper {
+        @include desktop {
+            width: 31.8%;
+            
+        }
+    }
+    
+    .img-form-wrapper {
+        @include desktop {
+            padding-top: 2rem;
+            display: flex;
+        }
+    }
+
     &__subTitle {
-        margin-left: 1rem;
+        margin: 0 0 0.5rem 1rem;
         color: $gray-text-color;
-        margin-bottom: 0.5rem;
+        @include tablet {
+            margin: 2.5rem 0 0.5rem 1.5rem;
+        }
+        @include desktop {
+            margin-left: 0;
+        }
+
+        
+       
     }
 
     &__thumbnail {
@@ -23,13 +69,34 @@
         &--img {
             width: 90%;
             margin: 0 1rem 2rem 1rem;
+            @include tablet {
+                margin: 0 0 2.5rem 1.5rem;
+                width: 45%;
+                height: 183px;
+            }
+
+            @include desktop {
+                width: 100%;
+                height: 183px;
+                margin: 0 1.5rem 2rem 0;
+                // border-bottom: 2px solid $gray-mercury-color;
+            }
         }
     
     }
 
+
     &__form {
 
        margin: 0 1rem 0.5rem 1rem;
+       @include tablet {
+         margin: 0 1.5rem 8rem 1.5rem;
+       }
+
+       @include desktop {
+           width: 66%;
+           margin-right: 0;
+       }
 
 
         &--lableTop {
@@ -57,6 +124,9 @@
         color: $gray-text-color;
         text-transform: uppercase;
         @include fontSize(13px, bold, 18px);
+        @include tablet {
+            border-bottom: 1px solid $gray-mercury-color;
+        }
 
        .inputDescription {
         height: 143px;
@@ -65,6 +135,12 @@
         background-color:  #FAFAFA;
         margin-top: 0.2rem;
         margin-bottom: 2rem;
+        @include tablet {
+            margin-bottom: 2.5rem;
+        }
+        @include desktop {
+            height: 94px;
+        }
        }
 
     }   
@@ -76,6 +152,12 @@
         background-color: #0095FF;
         height: 3.5rem;
         border-radius: 4px;
+        @include tablet {
+            width: 22.5%;
+        }
+        @include desktop {
+            width: 22.5%;
+        }
        }
 
        &--cancelButton {
@@ -84,7 +166,59 @@
         color: #0095FF;
         // background-color:#fff;;
         height: 3.5rem;
+        @include tablet {
+            width: 24.4%;
+        }
+        @include desktop {
+            width: 24.4%;
+        }
        
+       }
+
+
+       .button-wrapper {
+           @include tablet {
+               position: relative;
+
+               .uploadVideo__form--button {
+                   position: relative;
+                   top: 40px;
+                   left: 77.2%;
+                   
+               }
+
+               .uploadVideo__form--cancelButton {
+                width: 10%;
+                padding: 0;
+                position: relative;
+                margin-right: 3rem;
+                top: 40px;
+                left: 38.8%;
+               }
+           }
+
+           @include desktop {
+            position: relative;
+
+            .uploadVideo__form--button {
+                position: relative;
+                top: 40px;
+                left: 77.2%;
+                
+            }
+
+            .uploadVideo__form--cancelButton {
+             width: 10%;
+             padding: 0;
+             position: relative;
+             margin-right: 3rem;
+             top: 40px;
+             left: 38.8%;
+            }
+        }
+
+
+
        }
 
     }
