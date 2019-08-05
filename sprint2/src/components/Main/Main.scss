@@ -1,5 +1,10 @@
 @import '../../styles/mixins.scss';
 
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
 .sideVideoList {
     padding: 0rem 1rem 0rem 1rem;
     @include tablet {

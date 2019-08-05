@@ -1,5 +1,19 @@
 @import "../../styles/mixins.scss";
 
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Avenir-bold';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+* {
+    font-family: 'Avenir';
+}
+
 
 .uploadVideo {
 
@@ -11,6 +25,7 @@
 
     
     &__topTitle {
+        font-family: Avenir-bold;
         box-sizing: border-box;
         padding: 1.5rem 0 2rem 1rem;
         margin: 0;

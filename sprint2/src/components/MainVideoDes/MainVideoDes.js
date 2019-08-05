@@ -7,6 +7,8 @@ import "./MainVideoDes.scss";
 
 import CommentCard from "../CommentCard/CommentCard";
 
+
+
 class MainVideoDes extends React.Component {
   
   render() {
@@ -14,7 +16,7 @@ class MainVideoDes extends React.Component {
     //  console.log(this.props.mainVideoDes, this.props.mainVideoDes.comments)
 
      const date = new Date(this.props.mainVideoDes.timestamp);
-     const dateFormatted = date.getMonth() + 1 + '/' + date.getDate() + date.getFullYear();
+     const dateFormatted = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
 
 
     return (

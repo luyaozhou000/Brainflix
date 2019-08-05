@@ -1,5 +1,19 @@
 @import '../../styles/mixins.scss';
 
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Avenir-bold';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+* {
+    font-family: 'Avenir';
+}
+
 
 .mainVideoDescription {
     padding: 0rem 1rem 2.5rem 1rem;
@@ -14,7 +28,8 @@
     }
 
     &__title {
-        @include fontSize(24px,bold,32px);
+        font-family: Avenir-bold;
+        @include fontSize(24px,normal,32px);
         text-align: left;
         margin-top: 0;
         margin-bottom: 1rem;
