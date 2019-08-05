@@ -7,7 +7,7 @@ class Side extends React.Component {
   render() {
     console.log('this is Side');
     return (
-      <Link to={`/video/${this.props.data.id}`}>
+      <Link to={`/video/${this.props.data.id}`} className="sideVideo-link">
         
       <div className="sideVideo">
         <img className="sideVideo__img" src={this.props.data.image} alt="sideVideo" />
