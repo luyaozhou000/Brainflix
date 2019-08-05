@@ -13,6 +13,10 @@ class MainVideoDes extends React.Component {
     console.log('this is MainVideoDes', this.props.mainVideoDes);
     //  console.log(this.props.mainVideoDes, this.props.mainVideoDes.comments)
 
+     const date = new Date(this.props.mainVideoDes.timestamp);
+     const dateFormatted = date.getMonth() + 1 + '/' + date.getDate() + date.getFullYear();
+
+
     return (
       <>
         <div className="mainVideoDescription">
@@ -27,7 +31,7 @@ class MainVideoDes extends React.Component {
                 {this.props.mainVideoDes.channel}
               </div>
               <div className="mainVideoDescription__topContainer--date">
-                {this.props.mainVideoDes.timestamp}
+                {dateFormatted}
               </div>
             </div>
 
