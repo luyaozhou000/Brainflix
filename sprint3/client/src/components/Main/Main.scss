@@ -1,0 +1,54 @@
+@import '../../styles/mixins.scss';
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Avenir-bold';
+    src: url('../../Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Heavy.otf') format('opentype');
+}
+
+.sideVideoList {
+    padding: 0rem 1rem 0rem 1rem;
+    @include tablet {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+
+    @include desktop {
+        width: 31.8%;
+        padding-left: 1.5rem;
+        padding-right: 0;
+    }
+
+
+
+    &__title {
+        margin: 2.5rem 1rem 2.5rem 1rem;
+        text-transform: uppercase;
+        text-align: left;
+        margin-left: 0px;
+        color: #AFAFAF;
+        @include desktop {
+            margin-top: 0;
+            @include fontSize(14px,bold,20px);
+        }
+    }
+
+}
+
+
+.main-container {
+    @include desktop {
+        display: flex;
+        padding: 2.5rem 11.25rem 1rem 11.25rem; 
+        
+    }
+}
+
+.mainVideo-wrapper {
+    @include desktop {
+        width: 65.9%;
+    }
+}

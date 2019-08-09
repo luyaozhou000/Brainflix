@@ -1,0 +1,28 @@
+@mixin fontSize($font-size, $font-weight:'normal', $line-height:18px) {
+    font-size: $font-size;
+    font-weight: #{$font-weight};
+    line-height: $line-height;
+   
+    @content;
+}
+
+// tablet and desktop breakpoints:
+@mixin tablet {
+    @media (min-width: 768px) and (max-width:1439px) {
+        @content;
+    }
+};
+
+
+@mixin desktop {
+    @media (min-width:1439px) {
+        @content;
+    }
+}
+
+
+// ******  text color
+$gray-text-color: #AFAFAF;
+$gray-mercury-color: #E1E1E1;
+$gray-silver0color: #AFAFAF;
+

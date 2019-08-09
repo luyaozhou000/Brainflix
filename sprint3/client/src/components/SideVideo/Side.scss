@@ -1,0 +1,50 @@
+@import "../../styles/mixins.scss";
+
+
+.sideVideo {
+  
+    display: flex;
+    @include tablet {
+      width: 40%;
+    }
+   
+
+
+    &__img {
+        width: 41%;
+        height: 70px;
+        margin: 0rem 0.5rem 1.5rem 0;
+    }
+
+    &__description {
+      @include fontSize(13px);
+      
+
+      &--title {
+          text-align: left;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          
+          @include desktop {
+            @include fontSize(14px,bold,20px);
+          }
+      }
+
+      &--channel {
+        text-align: left;
+        @include tablet {
+          font-size: 12px;
+        }
+        @include desktop {
+          @include fontSize(14px,bold,20px);
+        }
+      }
+    }
+
+
+}
+
+.sideVideo-link {
+  text-decoration: none;
+  color: #000;
+}

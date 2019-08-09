@@ -10,7 +10,6 @@ import sideVideo6 from '../Assets/Images/video-list-6.jpg';
 import sideVideo7 from '../Assets/Images/video-list-7.jpg';
 import sideVideo8 from '../Assets/Images/video-list-8.jpg';
 
-console.log(video)
 
 const mainVideo = {
     id: '9',

@@ -49,13 +49,13 @@ class MainVideoDes extends React.Component {
         <div className="form-container">
           <h4 className="comment-form-title">3 Comments</h4>
 
-          <form className="comment-form">
+          <form onSubmit={this.props.whenSubmitted} className="comment-form">
             <img className="comment-form__img" src={mohan} />
 
             <div className="comment-form__wrapper">
               <label className="comment-form__wrapper--label">
                 Join the Conversation
-                <input className="comment-form__wrapper--input" type="text" />
+                <input className="comment-form__wrapper--input" name="input" type="text" />
               </label>
 
               <button className="comment-form__wrapper--button" type="submit">
@@ -64,11 +64,12 @@ class MainVideoDes extends React.Component {
             </div>
           </form>
         </div>
-
+   
         {/* use CommentCard component to create 3 comments */}
         {this.props.mainVideoDes.comments.map(item => (
           <CommentCard data={item} />
         ))}
+       
       </>
     );
   }

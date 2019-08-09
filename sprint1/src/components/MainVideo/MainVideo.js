@@ -8,7 +8,7 @@ class MainVideo extends React.Component {
 
     
    render () {
-    console.log(this.props.mainVideo)
+   //  console.log(this.props.mainVideo)
      return (
       <div className="MainVideo">
 
