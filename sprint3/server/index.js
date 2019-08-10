@@ -9,7 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 
-
 // testing...
 app.get('/', (req, res) => {
     res.send("hello you")
@@ -17,11 +16,6 @@ app.get('/', (req, res) => {
 
 // set up base route...
 app.use('/video', videoRoutes);
-
-
-
-
-
 
 
 

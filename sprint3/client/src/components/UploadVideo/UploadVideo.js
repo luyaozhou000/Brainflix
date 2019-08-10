@@ -4,6 +4,8 @@ import previewer from "../../Assets/Images/Upload-video-preview.jpg";
 import "./UploadVideo.scss";
 
 class UploadVideo extends React.Component {
+
+  
   render() {
     return (
       <div className="uploadVideo">
@@ -16,16 +18,16 @@ class UploadVideo extends React.Component {
           <img className="uploadVideo__thumbnail--img" src={previewer} alt="uploadThumbnail"/>
          </div>
 
-         <form className="uploadVideo__form">
-          <lable className="uploadVideo__form--lableTop">
+         <form onSubmit={this.props.whenVideoSubmitted} className="uploadVideo__form">
+          <label className="uploadVideo__form--lableTop">
             title your video
             <input className="inputTitle" type="text" name="videoTitle" />
-          </lable>
+          </label>
 
-          <lable className="uploadVideo__form--lableBottom">
+          <label className="uploadVideo__form--lableBottom">
             add a video description
             <input className="inputDescription" type="text" name="videoDes" />
-          </lable>
+          </label>
  
           <div className="button-wrapper">
            <button className="uploadVideo__form--button" type="submit">PUBLISH</button>
