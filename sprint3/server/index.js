@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const videoRoutes = require('./routes/video.js');
 
+
 // middleware...
 app.use(cors());
 app.use(express.json());

@@ -12,7 +12,7 @@ class Main extends React.Component {
   // NOTE: can also put an empty comments array in mainVideo to avoid .map error:
   state = {
     mainVideo: {},
-    sideVideo: []
+    sideVideo: [],
   };
 
   getVideos() {
@@ -33,8 +33,8 @@ class Main extends React.Component {
 
   getVideoDetails(idOfVideo) {
     console.log("this 3 happens ");
-    const url = `http://localhost:8080/video/${idOfVideo}`;
-    Axios.get(url)
+    // const url = `http://localhost:8080/video/${idOfVideo}`;
+    Axios.get(`http://localhost:8080/video/${idOfVideo}`)
       .then(res => {
         this.setState({
           mainVideo: res.data
@@ -50,11 +50,9 @@ class Main extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("component is updating");
-
     // console.log(this.state.mainVideo.id);
-    console.log(this.props.match.params.id);
-    if (this.state.mainVideo.id !== this.props.match.params.id) {
+    console.log("checking", this.state.mainVideo.id, this.props.match.params.id);
+    if (this.props.match.params.id !== undefined && this.state.mainVideo.id !== this.props.match.params.id) {
       Axios.get(
         `http://localhost:8080/video/${
           this.props.match.params.id
@@ -66,7 +64,6 @@ class Main extends React.Component {
           // update state of parent component,remember to put curly braces:
           this.setState({
             mainVideo: res.data,
-            
           });
         })
         .catch(error => console.log("error"));
@@ -77,22 +74,22 @@ class Main extends React.Component {
   // *********** Diving Deeper:  declare a func to handle submit event: this is not working!!!
   // NEED TO FIX THIS!!!!!!!!!!!
 
-  handleSubmit = event => {
-    event.preventDefault();
-    const value = event.target.input.value;
+  // handleSubmit = event => {
+  //   event.preventDefault();
+  //   const value = event.target.input.value;
 
-    if (this.state.mainVideo.id) {
-      console.log('axios post')
-      Axios.post(
-        `https://project-2-api.herokuapp.com/videos/${this.state.mainVideo.id}/comments?api_key=luyao`,
-        {
-          name: "New User",
-          comment: value
-        })
-      .then(this.getVideoDetails(this.state.mainVideo.id))
-      .catch(error => console.log("error posting"));
-    }
-  };
+  //   if (this.state.mainVideo.id) {
+  //     console.log('axios post')
+  //     Axios.post(
+  //       `https://project-2-api.herokuapp.com/videos/${this.state.mainVideo.id}/comments?api_key=luyao`,
+  //       {
+  //         name: "New User",
+  //         comment: value
+  //       })
+  //     .then(this.getVideoDetails(this.state.mainVideo.id))
+  //     .catch(error => console.log("error posting"));
+  //   }
+  // };
 
   render() {
     console.log("this is after render", this.state.mainVideo);

@@ -22,7 +22,7 @@ router.get('/:id', (req, res ) => {
     }
 
     res.send(result);
-    console.log(mainVideo[i])
+    console.log(result)
 }
    
 )
