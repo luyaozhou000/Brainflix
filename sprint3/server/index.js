@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 app.use('/video', videoRoutes);
 
 
-
+// ensure port is listening...
 app.listen(8080, () => {
     console.log('server is running');
 } )

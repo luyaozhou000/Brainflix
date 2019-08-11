@@ -9,13 +9,13 @@ class Side extends React.Component {
     return (
       <Link to={`/video/${this.props.data.id}`} className="sideVideo-link">
         
-      <div className="sideVideo">
-        <img className="sideVideo__img" src={this.props.data.image} alt="sideVideo" />
-        <div className="sideVideo__description">
-          <div className="sideVideo__description--title">{this.props.data.title}</div>
-          <div className="sideVideo__description--channel">{this.props.data.channel}</div>
+        <div className="sideVideo">
+         <img className="sideVideo__img" src={this.props.data.image} alt="sideVideo" />
+           <div className="sideVideo__description">
+             <div className="sideVideo__description--title">{this.props.data.title}</div>
+             <div className="sideVideo__description--channel">{this.props.data.channel}</div>
+          </div>
         </div>
-      </div>
     </Link> 
     );
   }

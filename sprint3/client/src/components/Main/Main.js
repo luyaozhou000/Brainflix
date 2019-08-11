@@ -15,6 +15,8 @@ class Main extends React.Component {
     sideVideo: [],
   };
 
+
+  // fetch side video data...
   getVideos() {
     console.log("this 2 happens ");
     Axios.get("http://localhost:8080/video/")
@@ -31,9 +33,12 @@ class Main extends React.Component {
       .catch(error => console.log("error"));
   }
 
+
+
+  // fetch main video data...
   getVideoDetails(idOfVideo) {
     console.log("this 3 happens ");
-    // const url = `http://localhost:8080/video/${idOfVideo}`;
+    
     Axios.get(`http://localhost:8080/video/${idOfVideo}`)
       .then(res => {
         this.setState({
@@ -68,29 +73,28 @@ class Main extends React.Component {
         })
         .catch(error => console.log("error"));
     }
-
   }
 
-  // *********** Diving Deeper for sprint 2:  declare a func to handle submit event: this is not working!!!
+  // ******* Diving Deeper for sprint 2:  declare a func to handle submit event: this is not working!!!
   // NEED TO FIX THIS!!!!!!!!!!! change the URL!!!
 
-  handleSubmit = event => {
-    event.preventDefault();
-    const value = event.target.input.value;
+  // handleSubmit = event => {
+  //   event.preventDefault();
+  //   const value = event.target.input.value;
 
-    if (this.state.mainVideo.id) {
-      console.log('axios post')
-      Axios.post(
-        `https://project-2-api.herokuapp.com/videos/${this.state.mainVideo.id}/comments?api_key=luyao`,
-        {
-          name: "New User",
-          comment: value
-        })
-      .then( () => {
-        this.getVideoDetails(this.state.mainVideo.id)})
-      .catch(error => console.log("error posting"));
-    }
-  };
+  //   if (this.state.mainVideo.id) {
+  //     console.log('axios post')
+  //     Axios.post(
+  //       `https://project-2-api.herokuapp.com/videos/${this.state.mainVideo.id}/comments?api_key=luyao`,
+  //       {
+  //         name: "New User",
+  //         comment: value
+  //       })
+  //     .then( () => {
+  //       this.getVideoDetails(this.state.mainVideo.id)})
+  //     .catch(error => console.log("error posting"));
+  //   }
+  // };
 
   render() {
     console.log("this is rendering", this.state.mainVideo);

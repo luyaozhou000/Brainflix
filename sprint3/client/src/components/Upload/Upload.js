@@ -1,11 +1,8 @@
 import React from "react";
 import Header from "../Header/Header";
 import axios from "axios";
-import marvel from "../../Assets/Images/marvel-hero.jpg";
-
-// import searchLogo from "../../Assets/Icons/SVG/Icon-search.svg";
-// import plusSign from "../../Assets/Icons/SVG/Icon-upload.svg";
-// import mohan from "../../Assets/Images/Mohan-muruge.jpg";
+// import marvel from "../../Assets/Images/marvel-hero.jpg";
+import road from "../../Assets/Images/road.jpg";
 
 import UploadVideo from '../UploadVideo/UploadVideo';
 
@@ -23,7 +20,7 @@ class Upload extends React.Component {
        axios.post("http://localhost:8080/video/", {
            title: videoTitle,
            description: videoDescription,
-           image: marvel
+           image: road
           
        }).then(console.log("post success"))
        .catch(error => console.log("error posting"));
