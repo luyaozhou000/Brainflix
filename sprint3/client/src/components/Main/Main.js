@@ -19,6 +19,9 @@ class Main extends React.Component {
   // fetch side video data...
   getVideos() {
     console.log("this 2 happens ");
+    
+    this.getVideoDetails("1af0jruup5gu");
+
     Axios.get("http://localhost:8080/video/")
       .then(response => {
         console.log(response.data);
@@ -26,11 +29,8 @@ class Main extends React.Component {
         this.setState({
           sideVideo: response.data
         });
-
-        this.getVideoDetails("1af0jruup5gu");
-        console.log("did this happen after 2??");
       })
-      .catch(error => console.log("error"));
+      .catch(error => console.log("error"));      
   }
 
 
@@ -41,11 +41,12 @@ class Main extends React.Component {
     
     Axios.get(`http://localhost:8080/video/${idOfVideo}`)
       .then(res => {
+        console.log("updating mainvideo....")
         this.setState({
           mainVideo: res.data
         });
       })
-      // console.log("updating mainvideo....")
+     
       .catch(error => console.log("error2"));
   }
 
@@ -64,8 +65,8 @@ class Main extends React.Component {
         }?api_key=luyao`
       )
         .then(res => {
-          // console.log(this.props.match.params);
-          // console.log("this 4 happens ");
+          console.log(this.props.match.params);
+          console.log("this 4 happens ");
           // update state of parent component,remember to put curly braces:
           this.setState({
             mainVideo: res.data,
